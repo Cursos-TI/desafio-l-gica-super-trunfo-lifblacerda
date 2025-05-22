@@ -62,6 +62,43 @@ int main() {
     printf("Área (em km²):\n");
     scanf("%f", &area2);
     
-    
+    printf("PIB (em bilhões de reais):\n");
+    scanf("%f", &pib2);
+
+    printf("Número de Pontos Turísticos:\n");
+    scanf("%d", &pontosTuristicos2);
+
+    // Exibição dos dados calculados
+    printf("\nInformações Calculadas:\n");
+
+    printf("\nCarta 1:\n");
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
+
+    printf("\nCarta 2:\n");
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
+
+    // Comparacao
+    printf("\nComparação de Cartas (Atributo: População):\n");
+    printf("Carta 1 - %sPopulação: %d\n", nomeCidade1, populacao1);
+    printf("Carta 2 - %sPopulação: %d\n", nomeCidade2, populacao2);
+
+    if (populacao1 > populacao2) {
+        printf("Resultado: Carta 1 venceu!\n");
+    } else if (populacao2 > populacao1) {
+        printf("Resultado: Carta 2 venceu!\n");
+    } else {
+        printf("Resultado: Empate!\n");
+    }
+
+        // Calculos
+    densidade1 = populacao1 / area1;
+    pibPerCapita1 = (pib1 * 1000000000) / populacao1;
+
+    densidade2 = populacao2 / area2;
+    pibPerCapita2 = (pib2 * 1000000000) / populacao2;
+
+    return 0;
 
 }
